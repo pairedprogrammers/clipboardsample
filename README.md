@@ -1,6 +1,7 @@
 <h1>Interacting with the Clipboard through JavaScript</h1>
-This is the source for the Paired Programmer's tutorial video, Interacting with the Clipboard through JavaScript.  This covers both native JavaScript as well as 
-the Adobe Flash library, ZeroClipboard.
+This is the source for the Paired Programmer's tutorial video, Interacting with the Clipboard through JavaScript.  This covers both native JavaScript as well asthe Adobe Flash library, <a href="http://www.zeroclipboard.org/">ZeroClipboard</a>.
+
+To run the sample, run "bower install" to pull down the dependencies.
 
 Watch the video here: TODO
 
