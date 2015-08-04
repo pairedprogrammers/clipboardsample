@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clipboard Test</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Zero Clipboard Test</h1>
+        <button class="btn btn-default" id="copy-button" data-clipboard-text="Copied text">Copy to Clipboard</button>
+
+        <h1>Pure JavaScript</h1>
+        <div class="form-group">
+            <label for="js-textbox">Text to Copy</label>
+            <input type="text" class="form-control" id="js-textbox" placeholder="Text to Copy">
+        </div>
+
+        <button class="btn btn-default" id="js-copy">Copy</button>
+        <button class="btn btn-default" id="js-cut">Cut</button>
+        <button class="btn btn-default" id="js-paste">Paste</button>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/zeroclipboard/dist/ZeroClipboard.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Zero Clipboard initialization
+            var client = new ZeroClipboard($('#copy-button'));
+
+            // Fires when ZeroClipboard has initialized
+            //client.on("ready", function(readyEvent) {
+                // alert( "ZeroClipboard SWF is ready!" );
+
+                // Fires after the copy operation has occurred
+                //client.on("aftercopy", function(event) {
+                    // `this` === `client`
+                    // `event.target` === the element that was clicked
+                //});
+            //});
+
+
+            // Click handlers for native JavaScript clipboard interaction
+            $('#js-copy').click(function() { // IE 11, Chrome, Firefox 42
+                $('#js-textbox').focus().select();
+                document.execCommand('copy');
+            });
+            $('#js-cut').click(function() { // IE 11, Chrome, Firefox 42
+                $('#js-textbox').focus().select();
+                document.execCommand('cut');
+            });
+            $('#js-paste').click(function() { // IE 11
+                $('#js-textbox').focus();
+                document.execCommand('paste');
+            });
+        });
+    </script>
+</body>
+
+</html>
