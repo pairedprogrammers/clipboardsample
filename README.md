@@ -3,7 +3,7 @@ This is the source for the Paired Programmer's tutorial video, Interacting with 
 
 To run the sample, run "bower install" to pull down the dependencies.
 
-Watch the video here: TODO
+<a href="https://www.youtube.com/watch?v=6e1v6D2ka3w">Click here to watch the video on YouTube</a>
 
 <h1>Follow the Paired Programmers</h1>
 <a href="https://www.youtube.com/channel/UCyFgdOQhteO_EWAQKh7zOvA">Subscribe to the Paired Programmers on YouTube</a>
